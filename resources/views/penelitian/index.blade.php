@@ -115,6 +115,7 @@
            
             <th>Nama Pemohon</th>
             <th>Instansi</th>
+            <th>Tanggal</th>
             <th>Status</th>
             <th></th>
           </tr>
@@ -131,6 +132,7 @@
            
             <td data-label="Name">{{ $penelitian->nama_pemohon }}</td>
             <td data-label="Company">{{ $penelitian->instansi }}</td>
+            <td data-label="Company">{{ $penelitian->created_at }}</td>
             <td data-label="City">@if($penelitian->status == 'belum_validasi')<p>Belum Validasi</p>@endif @if($penelitian->status == 'validasi')<p>Validasi</p>@endif @if($penelitian->status == 'ditolak')<p>Ditolak</p>@endif @if($penelitian->status == 'selesai')<p>Selesai</p>@endif</td>
            
           

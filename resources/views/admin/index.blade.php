@@ -138,6 +138,7 @@
 
 
     </div>
+    {{-- monthly chart --}}
     <div class="card mb-6">
       <header class="card-header">
         <p class="card-header-title">
@@ -164,8 +165,35 @@
       </div>
     </div>
   </div>
- 
 
+  {{-- year chart --}}
+ 
+  <div class="card mb-6">
+    <header class="card-header">
+      <p class="card-header-title">
+        <span class="icon"><i class="mdi mdi-finance"></i></span>
+        Performance
+      </p>
+      <a href="#" class="card-header">
+        <span class="icon"><i class="mdi mdi-reload"></i></span>
+      </a>
+    </header>
+  <div class="card-content">
+    <div class="chart-area">
+      <div class="h-full">
+        <div class="chartjs-size-monitor">
+          <div class="chartjs-size-monitor-expand">
+            <div></div>
+          </div>
+          <div class="chartjs-size-monitor-shrink">
+            <div></div>
+          </div>
+        </div>
+        <canvas id="chartLine2" width="2992" height="1000" class="chartjs-render-monitor block" style="height: 400px; width: 1197px;"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
     
 
 @include('layouts.mfooter')
@@ -233,7 +261,7 @@
     labels: ["selesai", "validasi", "belum_validasi"],
     datasets: [
       {
-        label: "My First Dataset",
+        label: "Data Ormas",
         data: [Selesai, validasi, Belum],
         backgroundColor: [
           "rgb(255, 0, 0)",
@@ -265,7 +293,7 @@ var Selesai1 = [{{ $selesai2 }}];
     labels:  ["selesai", "validasi", "belum_validasi"],
     datasets: [
       {
-        label: "My First Dataset",
+        label: "Data Rumah Ibadah",
         data: [Selesai1, validasi1, Belum1],
         backgroundColor: [
           "rgb(255, 0, 0)",
@@ -298,7 +326,7 @@ var Selesai1 = [{{ $selesai2 }}];
     labels: ["selesai", "validasi", "belum_validasi"],
     datasets: [
       {
-        label: "My First Dataset",
+        label: "Data Rekomendasi Peneltian",
         data: [Selesai2, validasi2, Belum2],
         backgroundColor: [
           "rgb(255, 0, 0)",
@@ -329,7 +357,7 @@ const dataDoughnut4 = {
   labels: ["selesai", "validasi", "belum_validasi"],
   datasets: [
     {
-      label: "My First Dataset",
+      label: "Data Izin Keramaian",
       data: [Selesai3, validasi3, Belum3],
       backgroundColor: [
         "rgb(255, 0, 0)",
@@ -356,34 +384,82 @@ var chartBar = new Chart(
 <!-- Chart line -->
 
 var januaryorm = {!! json_encode($January) !!};
-
+var febOrm = {!! json_encode($feborm) !!};
+var marOrm = {!! json_encode($marorm) !!};
+var aprOrm = {!! json_encode($aprorm) !!};
+var meiOrm = {!! json_encode($meiorm) !!};
+var junOrm = {!! json_encode($junorm) !!};
+var julOrm = {!! json_encode($julorm) !!};
 var Augorm ={!! json_encode($Augorm) !!};
-var septOrm={!! json_encode($septOrm) !!}
+var septOrm={!! json_encode($septOrm) !!};
+var oktbOrm={!! json_encode($oktoborm) !!};
+var novOrm = {!! json_encode($novorm) !!};
+var desOrm = {!! json_encode($desorm) !!};
+// ibdaha var
+var janIB = {!! json_encode($Januaryib) !!};
+var febIb = {!! json_encode($febib) !!};
+var marIb = {!! json_encode($marib) !!};
+var aprIb = {!! json_encode($aprib) !!};
+var meiIb = {!! json_encode($meiib) !!};
+var junIb = {!! json_encode($junib) !!};
+var julIb = {!! json_encode($julib) !!};
+var augIb = {!! json_encode($Augib) !!};
+var septIb = {!! json_encode($septib) !!};
+var oktIb = {!! json_encode($oktoib) !!};
+var novIb =  {!! json_encode($novib) !!};
+var desIb = {!! json_encode($desib) !!};
+
+//penelitian var
+var janPen = {!! json_encode($Januarypen) !!};
+var febPen = {!! json_encode($febpen) !!};
+var marPen = {!! json_encode($marpen) !!};
+var aprPen = {!! json_encode($aprpen) !!};
+var meiPen = {!! json_encode($meipen) !!};
+var junPen = {!! json_encode($junpen) !!};
+var julPen = {!! json_encode($julpen) !!};
+var augPen = {!! json_encode($Augpen) !!};
+var septPen = {!! json_encode($septpen) !!};
+var oktPen = {!! json_encode($oktopen) !!};
+var novPen =  {!! json_encode($novpen) !!};
+var desPen = {!! json_encode($despen) !!};
+//kermaian var
+var janKer = {!! json_encode($Januaryker) !!};
+var febKer = {!! json_encode($febker) !!};
+var marKer = {!! json_encode($marker) !!};
+var aprKer = {!! json_encode($aprker) !!};
+var meiKer = {!! json_encode($meiker) !!};
+var junKer = {!! json_encode($junker) !!};
+var julKer = {!! json_encode($julker) !!};
+var augKer = {!! json_encode($Augker) !!};
+var septKer = {!! json_encode($septker) !!};
+var oktKer = {!! json_encode($oktoker) !!};
+var novKer =  {!! json_encode($novker) !!};
+var desKer = {!! json_encode($desker) !!};
 
 const dataLine1 = {
   labels: ['Januari', 'Februari' , 'Maret' , 'April' , 'Mei' , 'Juni' , 'Juli ','Agustus','September', 'Oktober', 'November','Desember' ],
   datasets: [
     {
       label: "Layanan Organisasi Masyarakat",
-      data: [januaryorm,0,0,0,0,0,0,Augorm,septOrm],
+      data: [januaryorm,febOrm,marOrm,aprOrm,meiOrm,junOrm,julOrm,Augorm,septOrm,oktbOrm,novOrm,desOrm],
     
       hoverOffset: 4,
     },
     {
       label: "Data Pendaftaran Rumah Ibadah",
-      data: [300, 225, 500],
+      data: [janIB, febIb, marIb,aprIb,meiIb,junIb,julIb,augIb,septIb,oktIb,novIb,desIb],
     
       hoverOffset: 4,
     },
     {
       label: "Data Rekomendasi Penelitian",
-      data: [320, 125, 300],
+      data: [janPen, febPen, marPen,aprPen,meiPen,junPen,julPen,augPen,septPen,oktPen,novPen,desPen],
     
       hoverOffset: 4,
     },
     {
       label: "Surat Izin Keramaian",
-      data: [400, 325, 100],
+      data: [janKer, febKer, marKer,aprKer,meiKer,junKer,julKer,augKer,septKer,oktKer,novKer,desKer],
     
       hoverOffset: 4,
     },
@@ -427,6 +503,83 @@ const configLine1 = {
 var chartBar = new Chart(
   document.getElementById("chartLine1"),
   configLine1
+ 
+);
+
+
+// chart bar
+var ormas23 = {!! json_encode($ormas2023) !!}
+var ibadah23 = {!! json_encode($ibadah2023) !!}
+var keramaian23 = {!! json_encode($keramian2023) !!}
+var penelitian23 = {!! json_encode($penelitian2023) !!}
+
+const dataLine2 = {
+  labels: ['2023','2024','2025'],
+  datasets: [
+    {
+      label: "Layanan Organisasi Masyarakat",
+      data: [ormas23,0,0],
+    
+      hoverOffset: 4,
+    },
+    {
+      label: "Data Pendaftaran Rumah Ibadah",
+      data: [ibadah23, 0, 0],
+    
+      hoverOffset: 4,
+    },
+    {
+      label: "Data Rekomendasi Penelitian",
+      data: [penelitian23, 0, 0],
+    
+      hoverOffset: 4,
+    },
+    {
+      label: "Surat Izin Keramaian",
+      data: [keramaian23, 0, 0],
+    
+      hoverOffset: 4,
+    },
+  ],
+};
+
+const configLine2 = {
+  type: "bar",
+  data: dataLine2,
+  options: {responsive: true,
+    interaction: {
+      mode: 'index',
+      intersect: false,
+    },
+    stacked: false,
+    plugins: {
+      title: {
+        display: true,
+        text: 'Rekap Tahunan'
+      }
+    },
+    scales: {
+      y: {
+        type: 'linear',
+        display: true,
+        position: 'left',
+      },
+      y1: {
+        type: 'linear',
+        display: true,
+        position: 'right',
+
+        // grid line settings
+        grid: {
+          drawOnChartArea: false, // only want the grid lines for one axis to show up
+        },
+      },
+    }},
+};
+
+var chartLine2 = new Chart(
+  document.getElementById("chartLine2"),
+  configLine2
  
 );
 chart.update();

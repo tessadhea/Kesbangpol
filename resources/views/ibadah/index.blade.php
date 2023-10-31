@@ -117,6 +117,7 @@
             <th>Nama Ketua</th>
             <th>Alamat</th>
             <th>Nomor HP</th>
+            <th>Tanggal</th>
             <th>Status</th>
             <th></th>
           </tr>
@@ -136,6 +137,7 @@
             <td data-label="Company">{{ $ibadah->nama_ketua }}</td>
             <td data-label="City">{{ $ibadah->alamat}}</td>
             <td data-label="no_hps" >   {{ $ibadah->no_hp }}     </td>
+            <td data-label="Date" >   {{ $ibadah->created_at }}     </td>
             <td data-label="Created">     @if($ibadah->status == 'belum_validasi')<p>Belum Validasi</p>@endif @if($ibadah->status == 'validasi')<p>Validasi</p>@endif @if($ibadah->status == 'ditolak')<p>Ditolak</p>@endif @if($ibadah->status == 'selesai')<p>Selesai</p>@endif      
             </td>
             <td class="actions-cell">
