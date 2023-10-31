@@ -252,16 +252,22 @@ ol, li {
     </head>
     <body >
         <!-- navbar -->
-        <div class=" flex flex-row w-full  h-28 bg-red-500" >
-            <div class=" container  w-24 h-16 ml-10  mt-3 " > <img  src="img/logo1.png" alt="logo"> </div>
-            <div  class=" block ml-10 my-auto font-sans font-bold text-3xl text-white"><h1>KESBANGPOL</h1><h2 class=" text-lg">KOTA MANADO</h2></div>
-            <!-- start end navbar -->
-            <div class="flex flex-row-reverse w-full h-full">
-                <div class="fa-sharp fa-solid fa-right-to-bracket my-auto mr-7 ml-2 text-2xl text-white cursor-pointer "><a class="text-xl ml-1 my-auto font-sans " href="{{ route('register') }}">Sign in</a></div>
-                <div  class=" flex mr-2 fa-sharp fa-solid fa-user w-24   text-2xl text-white cursor-pointer   my-auto "><a class="text-xl ml-1 my-auto font-sans " href="/login">Login</a></div>
-             
+       <div class="bg-red-500">
+    <div class="container mx-auto py-3 px-4 sm:flex sm:items-center sm:justify-between">
+        <div class="flex items-center">
+            <div class="w-12 h-12">
+                <img src="img/logo1.png" alt="logo">
             </div>
-               
+            <div class="ml-3">
+                <h1 class="text-white text-2xl font-bold">KESBANGPOL</h1>
+                <h2 class="text-white text-sm">KOTA MANADO</h2>
+            </div>
+        </div>
+        <div class="sm:flex sm:space-x-4 mt-4 sm:mt-0">
+            <a href="{{ route('register') }}" class="text-white text-lg font-sans">Sign In</a>
+            <a href="/login" class="text-white text-lg font-sans">Login</a>
+        </div>
+    </div>
 </div>
         <!-- endnavbar -->
         <!-- start content -->
@@ -272,20 +278,17 @@ ol, li {
     <li id="carousel__slide1"
         tabindex="0"
         class="carousel__slide">
-        <div class=" flex h-96  mt-20 object-center bg-slate-500 bg-opacity-30 border-solid"> <div class=" grid mx-32 mt-24" >
-        <h1 class=" text-3xl text-center   mb-2">BADAN KESATUAN BANGSA DAN POLITIK KOTA MANADO</h1>  
-        <h2 class=" text-center "> MOTTO PELAYANAN:</h2>
-        <p class=" text-center "> “MELAYANI MASYARAKAT TUJUAN KAMI,
-          KEPUASAN MASYARAKAT TEKAT KAMI”
-          </p>
-          <h2 class=" text-center  "> SLOGAN PELAYANAN:</h2>
-          <p class=" text-center  "> “MEMBERIKAN INFORMASI YANG AKURAT, CEPAT DALAM PELAYANAN, TEPAT SASARAN, TAAT HUKUM, BERTANGGUNG JAWAB, TRANSPARAN DAN RAMAH KEPADA MASYARAKAT”
+        <div class="flex flex-col h-auto sm:h-96 mt-10 sm:mt-20 object-center bg-slate-500 bg-opacity-30 border-solid">
+          <div class="grid gap-4 mt-4 mx-4 sm:mx-16 lg:mx-32">
+            <h1 class="text-2xl sm:text-3xl lg:text-4xl text-center mt-14 mb-2">BADAN KESATUAN BANGSA DAN POLITIK KOTA MANADO</h1>
+            <h2 class="text-lg lg:text-xl text-center">MOTTO PELAYANAN:</h2>
+            <p class="text-sm lg:text-base text-center">
+                “MELAYANI MASYARAKAT TUJUAN KAMI, KEPUASAN MASYARAKAT TEKAT KAMI”
             </p>
-            <div class="flex justify-center items-center h-full">
-              <a class="bg-blue-500 cursor-pointer hover:bg-blue-900 text-white font-bold py-2 px-4 rounded">
-                Click me
-              </a>
-            </div>
+            <h2 class="text-lg lg:text-xl text-center">SLOGAN PELAYANAN:</h2>
+            <p class="text-sm lg:text-base text-center">
+                “MEMBERIKAN INFORMASI YANG AKURAT, CEPAT DALAM PELAYANAN, TEPAT SASARAN, TAAT HUKUM, BERTANGGUNG JAWAB, TRANSPARAN DAN RAMAH KEPADA MASYARAKAT”
+            </p>
         </div>
       
         </div>
@@ -300,35 +303,29 @@ ol, li {
     <li id="carousel__slide2"
         tabindex="0"
         class="carousel__slide">
-        <div class=" grid h-96  mt-20 object-center bg-slate-500 bg-opacity-30 border-solid">
-             <div class=" grid mx-32 mt-24" > 
-                <div class="flex ">
-                  <img class="  h-64 rounded-lg " src="img/kesbangpol resource.png" alt="procedure">
-                  <div class=" ml-20">
-                  <h1 class=" text-3xl mb-2">Procedure</h1>  
-                  <ul >
-                    <li class=" mb-1 list-disc">Penyusunan Dokumen Persiapan :  Persiapkan dokumen yang diperlukan untuk pendaftaran.</li>
-                    <li class="mb-1 list-disc">Pengumpulan Dokumen Pendukung : Mengupload Dokumen Pada Website</li>
-                     <li class="mb-1 list-disc">Pemeriksaan dan Verifikasi : Instansi pemerintah akan melakukan pemeriksaan</li>
-                     <li class="mb-1 list-disc">Persetujuan dan Pemberian Status : Jika pendaftaran disetujui, Anda akan menerima pemberitahuan</li>
-                     <li class="mb-1 list-disc">Pemberitahuan Publik! : Data Ormas Tersimpan di Website</li>
-                     <li class="mb-1 list-disc">Pemenuhan Kewajiban Pasca-Pendaftaran</li>
-                   </ul>
-                      <div class="  grid mt-6 ">
-                        <div class=" w-full object-center">
-                        <a class="   bg-blue-500 cursor-pointer hover:bg-blue-900 text-white font-bold py-2 px-3 rounded" href="ormas/ormas">
-                    Register Ormas
-                  </a>
-                  </div>
-                      </div>    
-                  </div>
-                  
+        <div class="flex flex-col h-auto sm:h-96 mt-10 sm:mt-20 object-center bg-slate-500 bg-opacity-30 border-solid">
+ <div class="grid gap-4 mt-4 mx-4 sm:mx-8 lg:mx-32">
+  <div class="flex flex-col-reverse sm:flex-row justify-center items-center">
+    <!-- Image Section -->
+    <img class=" h-64 sm:w-64 rounded-lg mt-14 mb-4 sm:mb-0" src="img/kesbangpol resource.png" alt="procedure">
 
-                </div>
-                
-
-
-             </div>
+    <!-- Text Content Section -->
+    <div class="ml-0 sm:ml-4">
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl mt-14 mb-2">Procedure</h1>
+        <ul class="list-disc list-inside">
+            <li class="mb-1">Penyusunan Dokumen Persiapan: Persiapkan dokumen yang diperlukan untuk pendaftaran.</li>
+            <li class="mb-1">Pengumpulan Dokumen Pendukung: Mengupload Dokumen Pada Website</li>
+            <li class="mb-1">Pemeriksaan dan Verifikasi: Instansi pemerintah akan melakukan pemeriksaan</li>
+            <li class="mb-1">Persetujuan dan Pemberian Status: Jika pendaftaran disetujui, Anda akan menerima pemberitahuan</li>
+            <li class="mb-1">Pemberitahuan Publik!: Data Ormas Tersimpan di Website</li>
+            <li class="mb-1">Pemenuhan Kewajiban Pasca-Pendaftaran</li>
+        </ul>
+        <div class="mt-4">
+            <a class="bg-blue-500 cursor-pointer hover:bg-blue-900 text-white font-bold py-2 px-3 rounded" href="ormas/ormas">Register Ormas</a>
+        </div>
+    </div>
+</div>
+</div>
 
         </div>
       <div class="carousel__snapper"></div>
@@ -340,20 +337,14 @@ ol, li {
     <li id="carousel__slide3"
         tabindex="0"
         class="carousel__slide">
-        <div class=" grid h-96  mt-20 object-center bg-slate-500 bg-opacity-30 border-solid">
+        <div class="flex flex-col h-auto sm:h-96 mt-10 sm:mt-20 object-center bg-slate-500 bg-opacity-30 border-solid">
              <div class=" grid mx-32 mt-24" > 
                 <div class="flex ">
                   <img class="  h-64 rounded-full " src="img/Screenshot 2023-06-26 024418.png" alt="procedure">
                   <div class=" ml-20">
                   <h1 class=" text-3xl mb-2">Profil Pimpinan</h1>  
                  <p>“Lewat kegiatan ini, diharapkan para generasi muda dapat mengembangkan diri dan belajar berpikir maju dan terbuka, serta memiliki etos kerja yang baik, disiplin waktu dan menjaga pola hidup teratur. Para generasi muda harus memiliki perencanaan ke depan. Itu merupakan bekal hidup kita. Karena, hal baik yang dapat kita wariskan adalah hikmat kebijaksanaan dalam membangun kemerdekaan berpikir, membentuk karakter dan jati diri,” tukas Lantu.</p>
-                      <div class="  grid mt-6 ">
-                        <div class=" w-full object-center">
-                        <a class="  bg-blue-500 cursor-pointer hover:bg-blue-900 text-white font-bold py-2 px-3 rounded">
-                    Find More
-                  </a>
-                  </div>
-                      </div>    
+                          
                   </div>
                   
 
@@ -373,13 +364,10 @@ ol, li {
     <li id="carousel__slide4"
         tabindex="0"
         class="carousel__slide">
-        <div class=" flex h-96  mt-20 object-center bg-slate-500 bg-opacity-30 border-solid"> <div class=" grid mx-32 mt-24" >
+        <div class="flex flex-col h-auto sm:h-96 mt-10 sm:mt-20 object-center bg-slate-500 bg-opacity-30 border-solid"> <div class=" grid mx-32 mt-24" >
         <h1 class=" text-3xl text-center mb-2">About Us</h1>  
         <p class=" text-justify ">Kesatuan Bangsa dan Politik (Kesbangpol) Kota Manado adalah pilar penjaga harmoni dan stabilitas. Kami berkomitmen memelihara keragaman budaya, agama, dan suku dalam satu kesatuan yang kokoh. Melalui program-program edukasi, dialog, dan kolaborasi dengan masyarakat, kami membangun kesadaran akan pentingnya persatuan dalam memajukan daerah. Dengan peran sebagai penghubung antara pemerintah dan masyarakat, Kesbangpol Kota Manado berupaya menciptakan lingkungan yang inklusif dan damai, di mana aspirasi publik didengar dan dihormati. Dalam semangat keadilan dan harmoni, kami bertekad memajukan Kota Manado sebagai contoh kota yang beragam namun selaras.</p>
-          <div class=" object-center mx-auto my-auto "><a class="   bg-blue-500 cursor-pointer hover:bg-blue-900 text-white font-bold py-2 px-4 rounded">
-  Find More
-</a>
-          </div>
+         
         </div>
       
         </div>
@@ -416,17 +404,32 @@ ol, li {
 </div>
         <!-- end content -->
         <!-- start footer -->
-<div class=" flex h-[12vh] w-full  bg-neutral-800">
-    <div class=" flex h-[12vh] w-[8vh] my-auto text-white text-center  text-1xl ml-6">
-   <div class=" flex ml-0.5 mr-2 my-auto  fa-brands fa-whatsapp cursor-pointer"> <p class=" cursor-pointer font-mono text-xs my-auto ml-1">082189003016</p> </div>
-   <div class="  cursor-pointer  flex fa-brands mr-2  fa-facebook my-auto  "> <p class="  cursor-pointer font-serif text-xs my-auto ml-1">@kota_manado</p> </div>
-   <div class=" flex ml-2 fa-brands mr-2 fa-instagram my-auto cursor-pointer"> <p class=" font-serif text-xs my-auto ml-1">@kota_manado</p></div> 
-   <div class=" flex ml-2 fa-solid   fa-location-dot mr-2 w-32   my-auto cursor-pointer"> <p class=" font-serif text-xs my-auto ml-1">Link_Google</p></div>
-    </div>
-    <div class="flex flex-row-reverse w-full h-[11vh]">
-    <div class="   flex fa-regular fa-copyright mr-5 my-auto text-white "> <p class=" font-serif text-xs my-auto ml-1">@Ghost_design</p> </div>
-    </div>
-</div>
+        <div class="flex items-center justify-between h-[12vh] bg-neutral-800">
+          <!-- Left side with contact information -->
+          <div class="flex items-center space-x-4 ml-6 text-white text-xs">
+              <div class="flex items-center space-x-1 cursor-pointer">
+                  <i class="fab fa-whatsapp"></i>
+                  <p>082189003016</p>
+              </div>
+              <div class="flex items-center space-x-1 cursor-pointer">
+                  <i class="fab fa-facebook"></i>
+                  <p>@kota_manado</p>
+              </div>
+              <div class="flex items-center space-x-1 cursor-pointer">
+                  <i class="fab fa-instagram"></i>
+                  <p>@kota_manado</p>
+              </div>
+              <div class="flex items-center space-x-1 cursor-pointer">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <p>Link_Google</p>
+              </div>
+          </div>
+      
+          <!-- Right side with copyright information -->
+          <div class="flex items-center text-white text-xs mr-5">
+              <p>@Ghost_design</p>
+          </div>
+      </div>
       
         <!-- end footer -->
 
