@@ -116,7 +116,7 @@
             <th>Nama Pemohon</th>
             <th>Jenis Kegiatan</th>
             <th>Lokasi</th>
-          
+            <th>Tanggal</th>
             <th>Status</th>
             <th></th>
           </tr>
@@ -135,6 +135,7 @@
             <td data-label="Name">{{ $keramaian->nama_pemohon }}</td>
             <td data-label="Company">{{ $keramaian->kegiatan }}</td>
             <td data-label="City">{{ $keramaian->tempat}}</td>
+            <td data-label="Tanggal">{{ $keramaian->created_at}}</td>
             <td data-label="Created">      @if($keramaian->status == 'belum_validasi')<p>Belum Validasi</p>@endif @if($keramaian->status == 'validasi')<p>Validasi</p>@endif @if($keramaian->status == 'ditolak')<p>Ditolak</p>@endif @if($keramaian->status == 'selesai')<p>Selesai</p>@endif      
             </td>
             <td class="actions-cell">

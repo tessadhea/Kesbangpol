@@ -117,6 +117,7 @@
             <th>Nama Ketua</th>
             <th>Alamat Domisisli</th>
             <th>Nomor Hp</th>
+            <th>Tanggal</th>
             <th>Status</th>
             <th></th>
           </tr>
@@ -135,6 +136,8 @@
             <td data-label="Company">{{ $ormas->nama_ketua }}</td>
             <td data-label="City">{{ $ormas->alamat_domisili }}</td>
             <td data-label="no_hps" >   {{ $ormas->no_hp }}          </td>
+            <td data-label="created at" >   {{ $ormas->created_at }}          </td>
+
             <td data-label="Created"> @if($ormas->status == 'belum_validasi')<p>Belum Validasi</p>@endif @if($ormas->status == 'validasi')<p>Validasi</p>@endif @if($ormas->status == 'ditolak')<p>Ditolak</p>@endif @if($ormas->status == 'selesai')<p>Selesai</p>@endif
           
             </td>

@@ -1,31 +1,31 @@
 table {
-  @apply w-full;
+  @apply border-collapse w-full;
 }
 
 thead {
-  @apply hidden lg:table-header-group;
+  @apply border-black hidden lg:table-header-group;
 }
 
 tr {
-  @apply max-w-full block relative border-b-4 border-gray-100
+  @apply max-w-full block relative border-b-4 border-black
     lg:table-row lg:border-b-0;
 }
 
 tr:last-child {
-  @apply border-b-0;
+  @apply border-gray-100 border-b;
 }
 
 th {
-  @apply lg:text-left lg:py-2 lg:px-3;
+  @apply border px-4 py-2 lg:text-left lg:py-2 lg:px-3;
 }
 
 td {
-  @apply flex justify-between text-right py-3 px-4 align-top border-b border-gray-100
+  @apply flex justify-between text-right py-3 px-4  align-top border-b  border
     lg:table-cell lg:text-left lg:py-2 lg:px-3 lg:align-middle lg:border-b-0;
 }
 
 tr:nth-child(odd) td {
-  @apply lg:bg-gray-50;
+  @apply border-gray-200  lg:bg-gray-50;
 }
 
 td:last-child {
