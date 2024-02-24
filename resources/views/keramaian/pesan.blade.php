@@ -13,9 +13,9 @@
 <section class="is-hero-bar">
     <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
       <h1 class="title">
-        penolakan data
+       Atribut Surat
       </h1>
-      <a href="{{ route('keramaian.index') }}" class=" text-3xl hover:text-4xl">  <span class="icon"><i class="mdi mdi-arrow-left-bold-circle  "></i></span></a>
+      <button  onclick="goBack()" class="text-3xl hover:text-4xl"> <span class="icon"><i class="mdi mdi-arrow-left-bold-circle  "></i></span></button> 
     </div>
   
     <section class="section main-section">
@@ -23,28 +23,104 @@
         <header class="card-header">
           <p class="card-header-title">
             <span class="icon"><i class="mdi mdi-ballot"></i></span>
-           Pesan penolakan data
+           Surat
           </p>
         </header>
         <div class="card-content">
-          <form method="POST" action="">
+          <form method="POST" action="{{ route('keramaian.keramaian.surat', $keramaian->id) }}">
               @csrf
-              @foreach ($pesans as $pesan)
-            <div class="field">
-              <label class="label">text</label>
+              <input type="hidden" name="$keramaian->id" value="{{ $keramaian->id}}">
+              <div class="field">
+                <label class="label">Nomor Surat</label>
+                <div class="flex w-full">
+                <input type="text" name="no1" placeholder="" class="input"> 
+               
+                 </div>
+              </div>
+              <div class="field">
+                <label class="label">Membaca</label>
+                <div class="field-body">
+                  <div class="field">
+                    <div class="control icons-left">
+                      <input class="input" id="membaca" name="membaca" type="text" >
+                      
+                    </div>
+                  </div>
+                  @error('membaca')
+                <p class=" text-xs text-red-500">{{ $message }}</p>
+                @enderror
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Tanggal Paragraf 1</label>
+                <div class="field-body">
+                  <div class="field">
+                    <div class="control icons-left">
+                      <input class="input" id="tanggal" name="tanggal" type="text" >
+                      
+                    </div>
+                  </div>
+                  @error('tanggal')
+                <p class=" text-xs text-red-500">{{ $message }}</p>
+                @enderror
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Tanggal Surat Dibuat</label>
+                <div class="field-body">
+                  <div class="field">
+                    <div class="control icons-left">
+                      <input class="input" id="date" name="date" type="date" >
+                      
+                    </div>
+                  </div>
+                  @error('date')
+                <p class=" text-xs text-red-500">{{ $message }}</p>
+                @enderror
+            
+              </div>
+            {{-- <div class="field">
+              <label class="label">Periode ketua</label>
               <div class="field-body">
                 <div class="field">
                   <div class="control icons-left">
-                    <input class="input textarea" id="pesan" name="pesan" type="text" value="{{ $pesan->pesan }}">
+                    <input class="input" id="pketua" name="pketua" type="text" >
                     
                   </div>
                 </div>
-                @error('name')
+                @error('pketua')
               <p class=" text-xs text-red-500">{{ $message }}</p>
               @enderror
           
             </div>
-            @endforeach
+            <div class="field">
+                <label class="label">Periode sekertaris dan bendahara</label>
+                <div class="field-body">
+                  <div class="field">
+                    <div class="control icons-left">
+                      <input class="input" id="pother" name="pother" type="text" >
+                      
+                    </div>
+                  </div>
+                  @error('pother')
+                <p class=" text-xs text-red-500">{{ $message }}</p>
+                @enderror
+            
+              </div>
+              <div class="field">
+                <label class="label">tanggal surat dibuat</label>
+                <div class="field-body">
+                  <div class="field">
+                    <div class="control icons-left">
+                      <input class="input" id="date" name="date" type="date" >
+                      
+                    </div>
+                  </div>
+                  @error('date')
+                <p class=" text-xs text-red-500">{{ $message }}</p>
+                @enderror
+            
+              </div> --}}
             <hr>
   
             <div class="field grouped">
