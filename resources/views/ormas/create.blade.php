@@ -173,7 +173,7 @@
             @enderror
             </div>
             <div class="field">
-              <label class="label">Scan Surat Keterangan Mendagri</label>
+              <label class="label">Scan Surat Keterangan Kemendagri</label>
               <div class="field-body">
                 <div class="field">
                   <label for="scan_sk_mendagri" class="sr-only">Choose file</label>
