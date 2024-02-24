@@ -23,7 +23,7 @@
       <header class="card-header">
         <p class="card-header-title">
           <span class="icon"><i class="mdi mdi-ballot"></i></span>
-          Tambah Rumah Ibadah
+          Tambah Izin Keramaian
         </p>
       </header>
       <div class="card-content">
