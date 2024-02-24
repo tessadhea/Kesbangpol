@@ -48,20 +48,7 @@
                
                  </div>
               </div>
-            <div class="field">
-              <label class="label"> Judul Penelitian</label>
-              <div class="field-body">
-                <div class="field">
-                
-                    <input class="input" id="judul" placeholder="Judul Penelitian" name="judul" type="text" >
-                    
-                 
-                </div>
-                @error('judul')
-              <p class=" text-xs text-red-500">{{ $message }}</p>
-              @enderror
-          
-            </div>
+            
             
               <div class="field">
                 <label class="label">Tanggal Surat Dibuat</label>
